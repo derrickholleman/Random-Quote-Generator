@@ -32,7 +32,7 @@ function App() {
       <h1>Inspirational Quotes</h1>
 
       <form className="quote-amount-input" onSubmit={handleSubmit}>
-        <label for="quote-amount" className="quote-amount">
+        <label htmlFor="quote-amount" className="quote-amount">
           How many quotes do you want?
         </label>
         <input
