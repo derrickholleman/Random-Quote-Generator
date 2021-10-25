@@ -5,7 +5,7 @@
 body {
   margin: 0;
   color: white;
-  background-color: #281d50;
+  background-color: #cf85d1;
 }
 
 p {
@@ -27,12 +27,12 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid #2e2b2b;
   font-weight: bold;
   font-size: 1rem;
   margin: 2rem 0;
-  -webkit-box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.45);
 }
 
 button:active {
@@ -54,12 +54,21 @@ button:active {
   margin: 2rem auto;
   padding: 1rem 0;
   font-size: 1.5rem;
-  background-color: #0e0e30;
+  background-color: #1f1f4e;
   border-radius: 10px;
   border: 2px dotted white;
-  -webkit-box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.45);
   max-width: 55%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.quote-response:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .quote-response p {

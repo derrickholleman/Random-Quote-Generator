@@ -1,8 +1,8 @@
 $primary-color: white;
-$primary-background: rgb(40, 29, 80);
-$secondary-background: rgb(14, 14, 48);
+$primary-background: rgb(207, 133, 209);
+$secondary-background: rgb(31, 31, 78);
 $border-radius: 10px;
-$box-shadow: 0px 3px 11px -3px rgba(0,0,0,0.75);
+$box-shadow: 0px 3px 11px -3px rgba(0,0,0,0.45);
 
 .App {
   text-align: center;
@@ -32,7 +32,7 @@ button {
   padding: 0.5rem 1rem;
   border-radius: $border-radius;
   cursor: pointer;
-  border: 2px solid black;
+  border: 2px solid rgb(46, 43, 43);
   font-weight: bold;
   font-size: 1rem;
   margin: 2rem 0;
@@ -60,6 +60,11 @@ button:active {
   border: 2px dotted $primary-color;
   box-shadow: $box-shadow;
   max-width: 55%;
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+.quote-response:hover {
+  transform: scale(1.1);
 }
 .quote-response p {
   padding: 0 1rem;
