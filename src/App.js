@@ -53,8 +53,9 @@ function App() {
           <p>{quote.author}</p>
         </div>
       ))}
-
+        <div style={{"marginTop":"5rem"}}>
       <small> &copy; Derrick Holleman</small>
+      </div>
     </div>
   );
 }
