@@ -59,10 +59,17 @@ button:active {
   border-radius: $border-radius;
   border: 2px dotted $primary-color;
   box-shadow: $box-shadow;
+  max-width: 55%;
 }
 .quote-response p {
   padding: 0 1rem;
 }
 .quote-response p:nth-child(1) {
   margin-bottom: 1rem;
+}
+
+@media all and (max-width: 745px) {
+  .quote-response {
+    max-width: 90%;
+  }
 }

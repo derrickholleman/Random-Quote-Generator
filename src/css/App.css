@@ -59,6 +59,7 @@ button:active {
   border: 2px dotted white;
   -webkit-box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.75);
+  max-width: 55%;
 }
 
 .quote-response p {
@@ -67,5 +68,11 @@ button:active {
 
 .quote-response p:nth-child(1) {
   margin-bottom: 1rem;
+}
+
+@media all and (max-width: 745px) {
+  .quote-response {
+    max-width: 90%;
+  }
 }
 /*# sourceMappingURL=App.css.map */
