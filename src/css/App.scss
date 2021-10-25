@@ -1,0 +1,68 @@
+$primary-color: white;
+$primary-background: rgb(40, 29, 80);
+$secondary-background: rgb(14, 14, 48);
+$border-radius: 10px;
+$box-shadow: 0px 3px 11px -3px rgba(0,0,0,0.75);
+
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  color: $primary-color;
+  background-color: $primary-background
+}
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+  padding: 1rem;
+}
+
+input {
+  display: block;
+  width: 20%;
+  margin: 1rem auto;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 2rem 0;
+  box-shadow: $box-shadow;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.quote-amount-input {
+  margin-bottom: 1rem;
+}
+.quote-amount {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.quote-response {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  background-color: $secondary-background;
+  border-radius: $border-radius;
+  border: 2px dotted $primary-color;
+  box-shadow: $box-shadow;
+}
+.quote-response p {
+  padding: 0 1rem;
+}
+.quote-response p:nth-child(1) {
+  margin-bottom: 1rem;
+}
