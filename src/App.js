@@ -19,6 +19,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     let quotesArray = [];
+    // get n amount of random quotes
     for (let i = 1; i <= amountOfQuotes; i++) {
       let result = Math.floor(Math.random() * quotes.length + 1);
       quotesArray.push(quotes[result]);
