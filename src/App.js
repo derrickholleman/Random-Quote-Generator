@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>~ Inspirational Quotes ~</h1>
+      <h1>Inspirational Quotes</h1>
 
       <form className="quote-amount-input" onSubmit={handleSubmit}>
         <label for="quote-amount" className="quote-amount">
