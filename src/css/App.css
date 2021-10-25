@@ -7,6 +7,7 @@ body {
   margin: 0;
   color: white;
   background-color: #cf85d1;
+  overflow-x: hidden;
 }
 
 p {
