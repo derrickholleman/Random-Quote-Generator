@@ -45,12 +45,20 @@ button:active {
           transform: scale(0.98);
 }
 
-.quote-amount-input {
-  margin-bottom: 1rem;
-}
-
 .quote-amount {
   font-size: 1.5rem;
+}
+
+.quote-amount-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45%;
+  margin: 0 auto;
+}
+
+.quote-amount-select button, .quote-number {
+  font-size: 1.75rem;
 }
 
 .quote-response {

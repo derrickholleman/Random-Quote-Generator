@@ -4,7 +4,7 @@ import "./css/App.css";
 function App() {
   const [quotes, setQuotes] = useState([]);
   const [quotesToDisplay, setQuotesToDisplay] = useState([]);
-  const [amountOfQuotes, setAmountOfQuotes] = useState(0);
+  const [amountOfQuotes, setAmountOfQuotes] = useState(1);
 
   useEffect(() => {
     async function getQuotes() {
@@ -16,8 +16,18 @@ function App() {
     getQuotes();
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   let quotesArray = [];
+  //   // get n amount of random quotes
+  //   for (let i = 1; i <= amountOfQuotes; i++) {
+  //     let result = Math.floor(Math.random() * quotes.length + 1);
+  //     quotesArray.push(quotes[result]);
+  //     setQuotesToDisplay(quotesArray);
+  //   }
+  // };
+
+  const getQuotes = () => {
     let quotesArray = [];
     // get n amount of random quotes
     for (let i = 1; i <= amountOfQuotes; i++) {
@@ -31,22 +41,37 @@ function App() {
     <div className="App">
       <h1>Inspirational Quotes</h1>
 
-      <form className="quote-amount-input" onSubmit={handleSubmit}>
-        <label htmlFor="quote-amount" className="quote-amount">
-          How many quotes do you want?
-        </label>
-        <input
-          type="number"
-          id="quote-amount"
-          min="1"
-          max="5"
-          placeholder="1-5"
-          required
-          // if state is going to be empty at first - (0) or (''), don't need to specify a value
-          onChange={(e) => setAmountOfQuotes(e.target.value)}
-        />
-        <button type="submit">Get Inspired!</button>
-      </form>
+      <div htmlFor="quote-amount" className="quote-amount">
+        How many quotes do you want?
+      </div>
+
+      {/* INCREMENT BUTTON */}
+      <div className="quote-amount-select">
+        <button
+          className="decrement-btn"
+          onClick={(e) =>
+            setAmountOfQuotes((amountOfQuotes) => amountOfQuotes - 1)
+          }
+          disabled={amountOfQuotes === 1}
+        >
+          -
+        </button>
+          
+        <div className="quote-number">{amountOfQuotes}</div>
+
+        {/* DECREMENT BUTTON */}
+        <button
+          className="increment-btn"
+          onClick={(e) =>
+            setAmountOfQuotes((amountOfQuotes) => amountOfQuotes + 1)
+          }
+          disabled={amountOfQuotes === 5}
+        >
+          +
+        </button>
+      </div>
+
+      <button onClick={getQuotes}>Get Inspired!</button>
 
       {quotesToDisplay.map((quote) => (
         <div className="quote-response">
@@ -54,8 +79,8 @@ function App() {
           <p>{quote.author}</p>
         </div>
       ))}
-        <div style={{"marginTop":"5rem"}}>
-      <small> &copy; Derrick Holleman</small>
+      <div style={{ marginTop: "5rem" }}>
+        <small> &copy; Derrick Holleman</small>
       </div>
     </div>
   );
