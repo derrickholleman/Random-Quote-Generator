@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./css/App.css";
+import minus from './images/minus.png';
+import plus from './images/plus.png'
 
 function App() {
   const [quotes, setQuotes] = useState([]);
@@ -54,9 +56,9 @@ function App() {
           }
           disabled={amountOfQuotes === 1}
         >
-          -
+          <img src={minus} alt="decrement"/>
         </button>
-          
+
         <div className="quote-number">{amountOfQuotes}</div>
 
         {/* DECREMENT BUTTON */}
@@ -67,7 +69,7 @@ function App() {
           }
           disabled={amountOfQuotes === 5}
         >
-          +
+        <img src={plus} alt="increment"/>
         </button>
       </div>
 
