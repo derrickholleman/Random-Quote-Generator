@@ -44,7 +44,7 @@ function App() {
       <h1>Inspirational Quotes</h1>
 
       <div htmlFor="quote-amount" className="quote-amount">
-        How many quotes do you want?
+        Press the buttons to get 1-5 quotes!
       </div>
 
       {/* INCREMENT BUTTON */}
@@ -81,9 +81,9 @@ function App() {
           <p>{quote.author}</p>
         </div>
       ))}
-      <div style={{ marginTop: "5rem" }}>
+      <footer style={{ marginTop: "5rem" }}>
         <small> &copy; Derrick Holleman</small>
-      </div>
+      </footer>
     </div>
   );
 }
