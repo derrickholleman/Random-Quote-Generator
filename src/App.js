@@ -73,7 +73,7 @@ function App() {
         </button>
       </div>
 
-      <button onClick={getQuotes}>Get Inspired!</button>
+      <button onClick={getQuotes} className="get-inspired-btn">Get Inspired!</button>
 
       {quotesToDisplay.map((quote) => (
         <div className="quote-response">
