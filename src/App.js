@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./css/App.css";
-import minus from './images/minus.png';
-import plus from './images/plus.png'
+import minus from "./images/minus.png";
+import plus from "./images/plus.png";
 
 function App() {
   const [quotes, setQuotes] = useState([]);
@@ -17,17 +17,6 @@ function App() {
 
     getQuotes();
   }, []);
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let quotesArray = [];
-  //   // get n amount of random quotes
-  //   for (let i = 1; i <= amountOfQuotes; i++) {
-  //     let result = Math.floor(Math.random() * quotes.length + 1);
-  //     quotesArray.push(quotes[result]);
-  //     setQuotesToDisplay(quotesArray);
-  //   }
-  // };
 
   const getQuotes = () => {
     let quotesArray = [];
@@ -56,7 +45,7 @@ function App() {
           }
           disabled={amountOfQuotes === 1}
         >
-          <img src={minus} alt="decrement"/>
+          <img src={minus} alt="decrement" />
         </button>
 
         <div className="quote-number">{amountOfQuotes}</div>
@@ -69,11 +58,14 @@ function App() {
           }
           disabled={amountOfQuotes === 5}
         >
-        <img src={plus} alt="increment"/>
+          <img src={plus} alt="increment" />
         </button>
       </div>
 
-      <button onClick={getQuotes} className="get-inspired-btn">Get Inspired!</button>
+      {/* GET QUOTES BUTTON */}
+      <button onClick={getQuotes} className="get-inspired-btn">
+        Get Inspired!
+      </button>
 
       {quotesToDisplay.map((quote) => (
         <div className="quote-response">
