@@ -61,12 +61,16 @@ button:active {
   margin: 0 auto;
 }
 
-.quote-amount-select button,
-.quote-number {
+.quote-amount-select button {
   font-size: 2rem;
   background-color: transparent;
   border: none;
   box-shadow: none;
+  line-height: 32px;
+  height: 48px; /* centers image in button */
+}
+.quote-number {
+  font-size: 2.5rem;
 }
 
 .quote-response {
@@ -102,9 +106,15 @@ footer {
   padding: 1rem 0;
 }
 
-@media all and (max-width: 820px) {
+@media all and (max-width: 391px) {
   .quote-amount-select {
-    max-width: 90%;
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 820px) and (min-width: 392px) {
+  .quote-amount-select {
+    max-width: 80%;
   }
 }
 
