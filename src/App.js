@@ -10,9 +10,13 @@ function App() {
 
   useEffect(() => {
     async function getQuotes() {
-      const quotesRes = await fetch("https://type.fit/api/quotes");
-      const quotesJSON = await quotesRes.json();
-      setQuotes(quotesJSON);
+      try {
+        const quotesRes = await fetch("https://type.fit/api/quotes");
+        const quotesJSON = await quotesRes.json();
+        setQuotes(quotesJSON);
+      } catch (err) {
+        console.error(err);
+      }
     }
 
     getQuotes();
