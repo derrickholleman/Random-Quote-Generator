@@ -18,7 +18,7 @@ function App() {
     getQuotes();
   }, []);
 
-  const getQuotes = () => {
+  const handleGetQuotes = () => {
     let quotesArray = [];
     // get n amount of random quotes
     for (let i = 1; i <= amountOfQuotes; i++) {
@@ -32,9 +32,7 @@ function App() {
     <div className="App">
       <h1>Inspirational Quotes</h1>
 
-      <div htmlFor="quote-amount" className="quote-amount">
-        Press the buttons to get 1-5 quotes!
-      </div>
+      <div className="quote-amount">Press the buttons to get 1-5 quotes!</div>
 
       {/* INCREMENT BUTTON */}
       <div className="quote-amount-select">
@@ -63,7 +61,7 @@ function App() {
       </div>
 
       {/* GET QUOTES BUTTON */}
-      <button onClick={getQuotes} className="get-inspired-btn">
+      <button onClick={handleGetQuotes} className="get-inspired-btn">
         Get Inspired!
       </button>
 
