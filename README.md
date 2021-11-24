@@ -20,7 +20,7 @@ then execute the command:
 
 ### ```docker run -p 3000:3000 derrickholleman/quote-generator```
 
-afterwards visit [http://localhost:3000](http://localhost:3000) to view the project
+afterwards, visit [http://localhost:3000](http://localhost:3000) to view the project
 
 ## App Screenshots
 
@@ -28,6 +28,6 @@ afterwards visit [http://localhost:3000](http://localhost:3000) to view the proj
 
 ![Viewing Quotes](https://github.com/derrickholleman/Random-Quote-Generator/blob/main/images/two-quotes.png)
 
-## Check out the deployed app
+## Deployment
 
 [Live app](https://random-inspirational-quote-generator.netlify.app)
