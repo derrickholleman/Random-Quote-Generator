@@ -69,8 +69,8 @@ function App() {
         Get Inspired!
       </button>
 
-      {quotesToDisplay.map((quote) => (
-        <div className="quote-response">
+      {quotesToDisplay.map((quote, index) => (
+        <div key={index} className="quote-response">
           <p>"{quote.text}"</p>
           <p>{quote.author}</p>
         </div>
